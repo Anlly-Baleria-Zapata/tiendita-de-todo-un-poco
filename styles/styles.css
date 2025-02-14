@@ -1,0 +1,75 @@
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #FFFFFC;
+}
+
+.header{
+   background-color: #d5cff3;
+   padding: 10px;
+}
+
+.horizontal-menu{
+    display: flex;
+    justify-content: space-around;
+    text-decoration: none;
+    margin: 10px 10px 10px 10px;
+    gap: 10px;
+}
+
+.letras-menu:hover{
+    background-color: #d6dee9;
+}
+
+.letras-menu{
+    text-decoration: none;
+    padding: 10px;
+    color:#000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.redes{
+    display: flex;
+    justify-content: space-between;
+    
+    gap: 20px;
+}
+
+
+.imagen-redes{
+    width: 40px;
+    height: 40px;
+    justify-content: space-between;
+}
+
+
+.imagenes-tienda{
+    margin: 50px;
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: auto auto auto;
+    height: 50px;
+    gap: 40px;
+}
+
+.lienzo{
+    width: 200px;
+    height: 200px;
+    display: flex;
+}
+
+.letra{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+hr{
+    border: 1px solid #9BF6FF;
+}
