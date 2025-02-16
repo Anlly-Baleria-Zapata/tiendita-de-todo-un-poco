@@ -1,18 +1,32 @@
 
+/* Importar fuentes de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* Estilos generales */
 *{
     padding: 0;
     margin: 0;
 }
 
+/* Estilos del body página */
 body {
-    background-color: #FFFFFC;
+    background-color: #B28DFF;
 }
 
+/* Estilos del contenedor principal */
+.main{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Estilos del header */
 .header{
-   background-color: #d5cff3;
+   background-color: #C5A3FF;
    padding: 10px;
 }
 
+/* Estilos del menu de navegacion */
 .horizontal-menu{
     display: flex;
     justify-content: space-around;
@@ -21,10 +35,12 @@ body {
     gap: 10px;
 }
 
+/*Estilo hover para el menu de navagacion */
 .letras-menu:hover{
-    background-color: #d6dee9;
+    background-color: #D1B1FF;
 }
 
+/* Estilos de las letras del menu de navegacion */
 .letras-menu{
     text-decoration: none;
     padding: 10px;
@@ -34,42 +50,126 @@ body {
     border-radius: 10px;
 }
 
+/* Estilos de el contenedor de las redes sociales */
 .redes{
     display: flex;
     justify-content: space-between;
-    
     gap: 20px;
 }
 
-
+/* Estilos de las imagenes de las redes sociales */
 .imagen-redes{
     width: 40px;
     height: 40px;
     justify-content: space-between;
 }
 
+/* Estilos para el titulo principal */
+.titulo-principal{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    font-family: 'Krona One', sans-serif;
+    color: #000000;
+}
 
+/* Estilos para el nombre principal de la tienda*/
+.nombre-de-la-tienda{
+    font-size: 30px;
+}
+
+/* Estilos para el contenedor principal de las imagenes de los lienzos a vender  */
 .imagenes-tienda{
     margin: 50px;
     display: grid;
     justify-content: space-around;
-    grid-template-columns: auto auto auto;
-    height: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 40px;
 }
 
+/* Estilos  de las imagenes de los lienzos a vender  */
 .lienzo{
     width: 200px;
     height: 200px;
-    display: flex;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #DCBFFF;
+    object-fit: cover;
 }
 
+/* Estilos de la letra del nombre del lienzo y su precio */
 .letra{
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
 
+/* Linea para dividir el nombre de los lienzos con su precio */
 hr{
-    border: 1px solid #9BF6FF;
+    border: 1px solid #FBE4FF;
 }
+
+/* Estilos del contenedor principal para el acerca de la tienda */
+.acerca-de{
+    color: #000000;
+    background-color: #DCBFFF;
+    text-align: center;
+    margin-top: auto;
+    gap:10px;
+}
+
+/* Estilos del titulo de acerca de la tienda */
+.acerca-de-titulo{
+    margin-top: 150px;
+    font-family: 'montserrat', sans-serif;
+    font-size: 30px;
+}
+
+/* Estilos del parrafo de acerca de la tienda */
+.acerca-de-parrafo{
+    font-family: 'mulish', serif;
+    margin-right: 250px;
+    margin-left: 250px;
+    margin-bottom: 150px;
+    font-size: 25px;
+}
+
+/* Estilos del contenedor footer */
+footer {
+    background-color: #505a68; 
+    padding: 20px 0; 
+}
+
+/* Estilos de las letras del footer */
+.footer, .redes-footer, .derechos {
+    text-align: center; 
+    margin-bottom: 10px; 
+}
+
+/* Estilos de las letras del footer */
+.letras-footer {
+    font-family: 'montserrat', sans-serif;
+    color: #000000;
+    text-decoration: none; 
+    margin: 0 15px; 
+    font-size: 18px; 
+}
+
+/* Estilos del hover del footer */
+.letras-footer:hover {
+    color: #a39f9f ; 
+}
+
+/* Estilos de las imagenes de las redes sociales del footer */
+.imagen-redes-footer {
+    width: 24px; 
+    height: 24px; 
+    margin: 0 10px; 
+}
+
+/* Estilos de las letras de los derechos del footer */
+.letras-derechos {
+    color: #000000;
+    font-size: 14px; 
+}
+
