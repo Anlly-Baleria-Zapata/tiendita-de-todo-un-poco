@@ -1,11 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cuenta personal</title>
+    <title>Mi Cuenta - Art Harmonie</title>
+    <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
-    
+    <!-- Barra de navegación -->
+    <header class="header">
+        <nav class="horizontal-menu">
+            <a class="titulo-principal" href="index.html">
+                <span class="nombre-de-la-tienda">Art Harmonie</span>Tiendita de arte
+            </a>
+            <a class="letras-menu" href="index.html">Tienda</a>
+            <a class="letras-menu" href="faq.html">FAQ</a>
+            <a class="letras-menu" href="contacto.html">Contacto</a>
+            <a class="letras-menu" href="cuenta-personal.html">Cuenta</a>
+            <!-- Enlaces e imágenes de redes -->
+            <section class="redes">
+                <a href="https://instagram.com"><img class="imagen-redes" src="img nav/instagram (1).png" alt="Instagram"></a>
+                <a href="https://facebook.com"><img class="imagen-redes" src="img nav/facebook.png" alt="Facebook"></a>
+                <a href="https://pinterest.com"><img class="imagen-redes" src="img nav/pinterest.png" alt="Pinterest"></a>
+                <a href="carrito.com"><img class="imagen-redes" src="img nav/carrito-de-compras.png" alt="Carrito"></a>
+            </section>
+        </nav>
+    </header>
+
+    <!-- Contenido principal de la página de cuenta -->
+    <main class="main-cuenta">
+        <section class="cuenta-container scroll-animation">
+            <h1 class="cuenta-titulo">Mi Cuenta</h1>
+            <p class="cuenta-subtitulo">¡Bienvenido de nuevo, ArtLover123!</p>
+
+            <!-- Información del perfil -->
+            <div class="perfil-info">
+                <div class="avatar">
+                    <img src="https://via.placeholder.com/150" alt="Avatar" class="avatar-img">
+                </div>
+                <div class="detalles-perfil">
+                    <p class="info-texto"><strong>Nombre:</strong> ArtLover123</p>
+                    <p class="info-texto"><strong>Correo electrónico:</strong> artlover123@example.com</p>
+                    <p class="info-texto"><strong>Miembro desde:</strong> Enero 2023</p>
+                </div>
+            </div>
+
+            <!-- Opciones de la cuenta -->
+            <div class="opciones-cuenta">
+                <h2 class="opciones-titulo">Opciones de la cuenta</h2>
+                <ul class="lista-opciones">
+                    <li class="opcion-item">
+                        <a href="#" class="opcion-link">Editar perfil</a>
+                    </li>
+                    <li class="opcion-item">
+                        <a href="#" class="opcion-link">Cambiar contraseña</a>
+                    </li>
+                    <li class="opcion-item">
+                        <a href="#" class="opcion-link">Historial de compras</a>
+                    </li>
+                    <li class="opcion-item">
+                        <a href="#" class="opcion-link">Configuración de notificaciones</a>
+                    </li>
+                    <li class="opcion-item">
+                        <a href="#" class="opcion-link">Cerrar sesión</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Estadísticas del usuario -->
+            <div class="estadisticas-usuario">
+                <h2 class="estadisticas-titulo">Mis Estadísticas</h2>
+                <div class="estadisticas-grid">
+                    <div class="estadistica-item">
+                        <p class="estadistica-numero">15</p>
+                        <p class="estadistica-texto">Órdenes completadas</p>
+                    </div>
+                    <div class="estadistica-item">
+                        <p class="estadistica-numero">8</p>
+                        <p class="estadistica-texto">Lienzos comprados</p>
+                    </div>
+                    <div class="estadistica-item">
+                        <p class="estadistica-numero">3</p>
+                        <p class="estadistica-texto">Reseñas escritas</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <section class="footer">
+            <a class="letras-footer" href="index.html">Tienda</a>
+            <a class="letras-footer" href="acerca-de.html">Acerca De</a>
+            <a class="letras-footer" href="faq.html">FAQ</a>
+            <a class="letras-footer" href="contacto.html">Contacto</a>
+            <a class="letras-footer" href="cuenta-personal.html">Cuenta</a>
+        </section>
+        <section class="redes-footer">
+            <a href="https://instagram.com"><img class="imagen-redes-footer" src="img nav/instagram (1).png" alt="Instagram"></a>
+            <a href="https://facebook.com"><img class="imagen-redes-footer" src="img nav/facebook.png" alt="Facebook"></a>
+            <a href="https://pinterest.com"><img class="imagen-redes-footer" src="img nav/pinterest.png" alt="Pinterest"></a>
+            <a href="carrito.com"><img class="imagen-redes-footer" src="img nav/carrito-de-compras.png" alt="Carrito"></a>
+        </section>
+        <section class="derechos">
+            <p class="letras-derechos">© 2021 Art Harmonie. Todos los derechos reservados.</p>
+        </section>
+    </footer>
+
+    <!-- Script para la animación de scroll -->
+    <script src="./scripts/script.js"></script>
 </body>
 </html>

@@ -1,175 +1,520 @@
-
 /* Importar fuentes de Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 /* Estilos generales */
-*{
+* {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
-/* Estilos del body página */
+/* Animación de scroll */
+.scroll-animation {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-animation.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Estilos del body */
 body {
     background-color: #B28DFF;
+    font-family: 'Montserrat', sans-serif;
+    color: #000000;
+    line-height: 1.6;
 }
 
 /* Estilos del contenedor principal */
-.main{
+.main {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
 /* Estilos del header */
-.header{
-   background-color: #C5A3FF;
-   padding: 10px;
+.header {
+    background-color: #C5A3FF;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos del menu de navegacion */
-.horizontal-menu{
-    display: flex;
-    justify-content: space-around;
-    text-decoration: none;
-    margin: 10px 10px 10px 10px;
-    gap: 10px;
-}
-
-/*Estilo hover para el menu de navagacion */
-.letras-menu:hover{
-    background-color: #D1B1FF;
-}
-
-/* Estilos de las letras del menu de navegacion */
-.letras-menu{
-    text-decoration: none;
-    padding: 10px;
-    color:#000000;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    border-radius: 10px;
-}
-
-/* Estilos de el contenedor de las redes sociales */
-.redes{
+/* Estilos del menú de navegación */
+.horizontal-menu {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-/* Estilos de las imagenes de las redes sociales */
-.imagen-redes{
+/* Estilos de los enlaces del menú */
+.letras-menu {
+    text-decoration: none;
+    padding: 10px 15px;
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.letras-menu:hover {
+    background-color: #D1B1FF;
+    color: #ffffff;
+}
+
+/* Estilos del contenedor de redes sociales */
+.redes {
+    display: flex;
+    gap: 15px;
+}
+
+/* Estilos de las imágenes de redes sociales */
+.imagen-redes {
     width: 40px;
     height: 40px;
-    justify-content: space-between;
+    transition: transform 0.3s ease;
 }
 
-/* Estilos para el titulo principal */
-.titulo-principal{
-    display: flex;
-    flex-direction: column;
+.imagen-redes:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos para el título principal */
+.titulo-principal {
     text-decoration: none;
     font-family: 'Krona One', sans-serif;
     color: #000000;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-/* Estilos para el nombre principal de la tienda*/
-.nombre-de-la-tienda{
+.nombre-de-la-tienda {
     font-size: 30px;
-}
-
-/* Estilos para el contenedor principal de las imagenes de los lienzos a vender  */
-.imagenes-tienda{
-    margin: 50px;
-    display: grid;
-    justify-content: space-around;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 40px;
-}
-
-/* Estilos  de las imagenes de los lienzos a vender  */
-.lienzo{
-    width: 200px;
-    height: 200px;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #DCBFFF;
-    object-fit: cover;
-}
-
-/* Estilos de la letra del nombre del lienzo y su precio */
-.letra{
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
 
-/* Linea para dividir el nombre de los lienzos con su precio */
-hr{
-    border: 1px solid #FBE4FF;
+/* Estilos para el contenedor de las imágenes de los lienzos */
+.imagenes-tienda {
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    padding: 0 20px;
 }
 
-/* Estilos del contenedor principal para el acerca de la tienda */
-.acerca-de{
+/* Estilos de las imágenes de los lienzos */
+.lienzo {
+    width: 100%;
+    height: 250px;
+    border-radius: 15px;
+    background-color: #DCBFFF;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lienzo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos de la letra del nombre del lienzo y su precio */
+.letra {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
     color: #000000;
+    margin-top: 10px;
+}
+
+hr {
+    border: 1px solid #FBE4FF;
+    margin: 10px 0;
+}
+
+/* Estilos del contenedor "Acerca De" */
+.acerca-de {
     background-color: #DCBFFF;
     text-align: center;
+    padding: 100px 20px;
     margin-top: auto;
-    gap:10px;
 }
 
-/* Estilos del titulo de acerca de la tienda */
-.acerca-de-titulo{
-    margin-top: 150px;
-    font-family: 'montserrat', sans-serif;
-    font-size: 30px;
+.acerca-de-titulo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
 }
 
-/* Estilos del parrafo de acerca de la tienda */
-.acerca-de-parrafo{
-    font-family: 'mulish', serif;
-    margin-right: 250px;
-    margin-left: 250px;
-    margin-bottom: 150px;
-    font-size: 25px;
+.acerca-de-parrafo {
+    font-family: 'Mulish', serif;
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
 }
 
-/* Estilos del contenedor footer */
+/* Estilos del footer */
 footer {
-    background-color: #505a68; 
-    padding: 20px 0; 
+    background-color: #505a68;
+    padding: 40px 20px;
+    text-align: center;
 }
 
-/* Estilos de las letras del footer */
 .footer, .redes-footer, .derechos {
-    text-align: center; 
-    margin-bottom: 10px; 
+    margin-bottom: 20px;
 }
 
-/* Estilos de las letras del footer */
 .letras-footer {
-    font-family: 'montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: #000000;
-    text-decoration: none; 
-    margin: 0 15px; 
-    font-size: 18px; 
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    transition: color 0.3s ease;
 }
 
-/* Estilos del hover del footer */
 .letras-footer:hover {
-    color: #a39f9f ; 
+    color: #a39f9f;
 }
 
-/* Estilos de las imagenes de las redes sociales del footer */
 .imagen-redes-footer {
-    width: 24px; 
-    height: 24px; 
-    margin: 0 10px; 
+    width: 24px;
+    height: 24px;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
 }
 
-/* Estilos de las letras de los derechos del footer */
+.imagen-redes-footer:hover {
+    transform: scale(1.1);
+}
+
 .letras-derechos {
     color: #000000;
-    font-size: 14px; 
+    font-size: 14px;
+    margin-top: 20px;
 }
 
+
+/* Estilos específicos para la página de contacto */
+.main-contacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 50px 20px;
+    background-color: #B28DFF;
+}
+
+.contacto-container {
+    background-color: #DCBFFF;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+}
+
+.contacto-titulo {
+    font-family: 'Krona One', sans-serif;
+    font-size: 48px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.contacto-subtitulo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: #000000;
+    margin-bottom: 40px;
+}
+
+.formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.form-group label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #000000;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #B28DFF;
+    border-radius: 10px;
+    font-family: 'Mulish', sans-serif;
+    font-size: 16px;
+    color: #000000;
+    background-color: #FBE4FF;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #505a68;
+    outline: none;
+}
+
+.boton-enviar {
+    background-color: #505a68;
+    color: #ffffff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.boton-enviar:hover {
+    background-color: #a39f9f;
+}
+
+.info-contacto {
+    margin-top: 40px;
+}
+
+.info-titulo {
+    font-family: 'Krona One', sans-serif;
+    font-size: 24px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.info-texto {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.info-texto a {
+    color: #505a68;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.info-texto a:hover {
+    color: #a39f9f;
+}
+
+/* Estilos específicos para la página de cuenta */
+.main-cuenta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 50px 20px;
+    background-color: #B28DFF;
+}
+
+.cuenta-container {
+    background-color: #DCBFFF;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+}
+
+.cuenta-titulo {
+    font-family: 'Krona One', sans-serif;
+    font-size: 48px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.cuenta-subtitulo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: #000000;
+    margin-bottom: 40px;
+}
+
+.perfil-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.avatar-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #B28DFF;
+}
+
+.detalles-perfil {
+    text-align: left;
+}
+
+.info-texto {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.opciones-cuenta {
+    margin-bottom: 40px;
+}
+
+.opciones-titulo {
+    font-family: 'Krona One', sans-serif;
+    font-size: 24px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.lista-opciones {
+    list-style: none;
+    padding: 0;
+}
+
+.opcion-item {
+    margin-bottom: 10px;
+}
+
+.opcion-link {
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: #505a68;
+    transition: color 0.3s ease;
+}
+
+.opcion-link:hover {
+    color: #a39f9f;
+}
+
+.estadisticas-usuario {
+    margin-top: 40px;
+}
+
+.estadisticas-titulo {
+    font-family: 'Krona One', sans-serif;
+    font-size: 24px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.estadisticas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.estadistica-item {
+    background-color: #FBE4FF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.estadistica-numero {
+    font-family: 'Krona One', sans-serif;
+    font-size: 36px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.estadistica-texto {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: #000000;
+}
+
+
+
+/* Estilos específicos para la página de FAQ */
+.main-faq {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 50px 20px;
+    background-color: #B28DFF;
+}
+
+.faq-container {
+    background-color: #DCBFFF;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+}
+
+.faq-titulo {
+    font-family: 'Krona One', sans-serif;
+    font-size: 48px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.faq-subtitulo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: #000000;
+    margin-bottom: 40px;
+}
+
+.preguntas-lista {
+    text-align: left;
+}
+
+.pregunta-item {
+    margin-bottom: 30px;
+}
+
+.pregunta-titulo {
+    font-family: 'Krona One', sans-serif;
+    font-size: 24px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.pregunta-respuesta {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: #000000;
+    line-height: 1.6;
+}
+
+.pregunta-respuesta a {
+    color: #505a68;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.pregunta-respuesta a:hover {
+    color: #a39f9f;
+}

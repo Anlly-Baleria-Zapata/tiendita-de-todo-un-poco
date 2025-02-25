@@ -1,11 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>contacto</title>
+    <title>Contacto - Art Harmonie</title>
+    <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
-    
+    <!-- Barra de navegación -->
+    <header class="header">
+        <nav class="horizontal-menu">
+            <a class="titulo-principal" href="index.html">
+                <span class="nombre-de-la-tienda">Art Harmonie</span>Tiendita de arte
+            </a>
+            <a class="letras-menu" href="index.html">Tienda</a>
+            <a class="letras-menu" href="faq.html">FAQ</a>
+            <a class="letras-menu" href="contacto.html">Contacto</a>
+            <a class="letras-menu" href="cuenta-personal.html">Cuenta</a>
+            <!-- Enlaces e imágenes de redes -->
+            <section class="redes">
+                <a href="https://instagram.com"><img class="imagen-redes" src="img nav/instagram (1).png" alt="Instagram"></a>
+                <a href="https://facebook.com"><img class="imagen-redes" src="img nav/facebook.png" alt="Facebook"></a>
+                <a href="https://pinterest.com"><img class="imagen-redes" src="img nav/pinterest.png" alt="Pinterest"></a>
+                <a href="carrito.com"><img class="imagen-redes" src="img nav/carrito-de-compras.png" alt="Carrito"></a>
+            </section>
+        </nav>
+    </header>
+
+    <!-- Contenido principal de la página de contacto -->
+    <main class="main-contacto">
+        <section class="contacto-container scroll-animation">
+            <h1 class="contacto-titulo">¡Contáctanos!</h1>
+            <p class="contacto-subtitulo">¿Tienes alguna pregunta, sugerencia o simplemente quieres saludarnos? ¡Estamos aquí para ti!</p>
+
+            <!-- Formulario de contacto -->
+            <form class="formulario-contacto">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" placeholder="tucorreo@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..." rows="5" required></textarea>
+                </div>
+                <button type="submit" class="boton-enviar">Enviar mensaje</button>
+            </form>
+
+            <!-- Información de contacto adicional -->
+            <div class="info-contacto">
+                <h2 class="info-titulo">Otras formas de contactarnos</h2>
+                <p class="info-texto">📧 <a href="mailto:info@artharmonie.com">info@artharmonie.com</a></p>
+                <p class="info-texto">📞 +52 55 1234 5678</p>
+                <p class="info-texto">📍 Ciudad de México, México</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <section class="footer">
+            <a class="letras-footer" href="index.html">Tienda</a>
+            <a class="letras-footer" href="acerca-de.html">Acerca De</a>
+            <a class="letras-footer" href="faq.html">FAQ</a>
+            <a class="letras-footer" href="contacto.html">Contacto</a>
+            <a class="letras-footer" href="cuenta-personal.html">Cuenta</a>
+        </section>
+        <section class="redes-footer">
+            <a href="https://instagram.com"><img class="imagen-redes-footer" src="img nav/instagram (1).png" alt="Instagram"></a>
+            <a href="https://facebook.com"><img class="imagen-redes-footer" src="img nav/facebook.png" alt="Facebook"></a>
+            <a href="https://pinterest.com"><img class="imagen-redes-footer" src="img nav/pinterest.png" alt="Pinterest"></a>
+            <a href="carrito.com"><img class="imagen-redes-footer" src="img nav/carrito-de-compras.png" alt="Carrito"></a>
+        </section>
+        <section class="derechos">
+            <p class="letras-derechos">© 2021 Art Harmonie. Todos los derechos reservados.</p>
+        </section>
+    </footer>
+
+    <!-- Script para la animación de scroll -->
+    <script src="./scripts/script.js"></script>
 </body>
 </html>
