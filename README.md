@@ -28,17 +28,7 @@
 
 ---
 
-## 📂 Estructura del proyecto
-Art-Harmonie/
-├── index.html # Página principal
-├── contacto.html # Página de contacto
-├── cuenta-personal.html # Página de cuenta personal
-├── faq.html # Página de preguntas frecuentes
-├── styles/
-│ └── styles.css # Archivo de estilos CSS
-├── scripts/
-│ └── scrollAnimation.js # Script para animaciones de scroll
-└── img nav/ # Imágenes de la barra de navegación
+
 
 
    
